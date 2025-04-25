@@ -32,21 +32,23 @@ class SavedOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: IconButton(
-              icon: Icon(Icons.arrow_back, size: 32),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              color: Colors.black,
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                icon: Icon(Icons.arrow_back, size: 32),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                color: Colors.black,
+              ),
             ),
-          ),
-          Center(child: Text('Saved order')),
-        ],
+            Center(child: Text('Saved order')),
+          ],
+        ),
       ),
     );
   }

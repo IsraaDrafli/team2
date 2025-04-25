@@ -19,162 +19,164 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final wid = MediaQuery.of(context).size.width;
     final hit = MediaQuery.of(context).size.height;
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-          Row(
-            children: [
-              Container(
-                width: wid * 0.2,
-                color: Color.fromRGBO(32, 127, 14, 1),
-                child: Column(
-                  children: [
-                    SizedBox(height: 30),
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage("Images/p.jpg"),
-                    ),
-                    Spacer(),
-                    SidebarItem(title: "Smoothies", index: 0),
-                    SidebarItem(title: "Toasts", index: 1),
-                    SidebarItem(title: "Salads", index: 2),
-                    SidebarItem(title: "Granola Bowls", index: 3),
-                    Spacer(),
-                    Icon(Icons.more_vert, color: Colors.white),
-                    SizedBox(height: 20),
-                  ],
-                ),
-              ),
-
-              Expanded(
-                child: SingleChildScrollView(
-                  padding: EdgeInsets.all(16),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Stack(
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: wid * 0.2,
+                  color: Color.fromRGBO(32, 127, 14, 1),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 40),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Hi user,",
-                            style: GoogleFonts.poppins(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SearchBox(),
-                        ],
+                      SizedBox(height: 30),
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage("Images/p.jpg"),
                       ),
-
+                      Spacer(),
+                      SidebarItem(title: "Smoothies", index: 0),
+                      SidebarItem(title: "Toasts", index: 1),
+                      SidebarItem(title: "Salads", index: 2),
+                      SidebarItem(title: "Granola Bowls", index: 3),
+                      Spacer(),
+                      Icon(Icons.more_vert, color: Colors.white),
                       SizedBox(height: 20),
-                      Text(
-                        "Popular",
-                        style: GoogleFonts.inter(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
+                    ],
+                  ),
+                ),
+      
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 40),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            PopularCard(
-                              name: "Chocolate Fruit Oats",
-                              calories: "405 cal",
-                              imagePath: "Images/kiwi.png",
+                            Text(
+                              "Hi user,",
+                              style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            SizedBox(width: 10),
-                            PopularCard(
-                              name: "Protein Rice Medley",
-                              calories: "510 cal",
-                              imagePath: "Images/rice.png",
-                            ),
-                            SizedBox(width: 10),
-                            PopularCard(
-                              name: "Choco Berry",
-                              calories: "420 cal",
-                              imagePath: "Images/chocolat.png",
-                            ),
-                            SizedBox(width: 10),
-                            PopularCard(
-                              name: "Tuna Vegetable Rice",
-                              calories: "525",
-                              imagePath: "Images/rice2.png",
-                            ),
-                            SizedBox(width: 10),
-                            PopularCard(
-                              name: "Caesar Salad",
-                              calories: "475",
-                              imagePath: "Images/cesar.png",
-                            ),
-                            SizedBox(width: 10),
-                            PopularCard(
-                              name: "Avocado Tofu Grain",
-                              calories: "508",
-                              imagePath: "Images/avocad.png",
-                            ),
+                            SearchBox(),
                           ],
                         ),
-                      ),
-
-                      SizedBox(height: 20),
-                      Text(
-                        "Our salads",
-                        style: GoogleFonts.inter(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
+      
+                        SizedBox(height: 20),
+                        Text(
+                          "Popular",
+                          style: GoogleFonts.inter(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10),
-                      SaladCard(
-                        title: "Vegetable Salads",
-                        description:
-                            "These salads are refreshing, nutritious, and customizable.",
-                        imagePath: "Images/garden.png",
-                      ),
-                      SaladCard(
-                        title: "Protein-based Salads",
-                        description:
-                            "These provide protein and can be customized with herbs, nuts.",
-                        imagePath: "Images/chicken.png",
-                      ),
-                      SizedBox(height: 100),
+                        SizedBox(height: 10),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              PopularCard(
+                                name: "Chocolate Fruit Oats",
+                                calories: "405 cal",
+                                imagePath: "Images/kiwi.png",
+                              ),
+                              SizedBox(width: 10),
+                              PopularCard(
+                                name: "Protein Rice Medley",
+                                calories: "510 cal",
+                                imagePath: "Images/rice.png",
+                              ),
+                              SizedBox(width: 10),
+                              PopularCard(
+                                name: "Choco Berry",
+                                calories: "420 cal",
+                                imagePath: "Images/chocolat.png",
+                              ),
+                              SizedBox(width: 10),
+                              PopularCard(
+                                name: "Tuna Vegetable Rice",
+                                calories: "525",
+                                imagePath: "Images/rice2.png",
+                              ),
+                              SizedBox(width: 10),
+                              PopularCard(
+                                name: "Caesar Salad",
+                                calories: "475",
+                                imagePath: "Images/cesar.png",
+                              ),
+                              SizedBox(width: 10),
+                              PopularCard(
+                                name: "Avocado Tofu Grain",
+                                calories: "508",
+                                imagePath: "Images/avocad.png",
+                              ),
+                            ],
+                          ),
+                        ),
+      
+                        SizedBox(height: 20),
+                        Text(
+                          "Our salads",
+                          style: GoogleFonts.inter(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        SaladCard(
+                          title: "Vegetable Salads",
+                          description:
+                              "These salads are refreshing, nutritious, and customizable.",
+                          imagePath: "Images/garden.png",
+                        ),
+                        SaladCard(
+                          title: "Protein-based Salads",
+                          description:
+                              "These provide protein and can be customized with herbs, nuts.",
+                          imagePath: "Images/chicken.png",
+                        ),
+                        SizedBox(height: 100),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+      
+            Positioned(
+              bottom: 20,
+              left: 0,
+              right: 0,
+              child: Align(
+                alignment: AlignmentDirectional(0.5, 0.5),
+                child: Container(
+                  width: wid * 0.68,
+                  height: hit * 0.079,
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    color: mygreen,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      NavIcon(icon: Icons.home, index: 0),
+                      NavIcon(icon: Icons.shopping_cart, index: 1),
+                      NavIcon(icon: Icons.menu, index: 2),
                     ],
                   ),
                 ),
               ),
-            ],
-          ),
-
-          Positioned(
-            bottom: 20,
-            left: 0,
-            right: 0,
-            child: Align(
-              alignment: AlignmentDirectional(0.5, 0.5),
-              child: Container(
-                width: wid * 0.68,
-                height: hit * 0.079,
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                decoration: BoxDecoration(
-                  color: mygreen,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    NavIcon(icon: Icons.home, index: 0),
-                    NavIcon(icon: Icons.shopping_cart, index: 1),
-                    NavIcon(icon: Icons.menu, index: 2),
-                  ],
-                ),
-              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

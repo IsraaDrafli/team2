@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
                         border: Border.all(color: Colors.white),
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                          image: AssetImage('Images/logo .png'),
+                          image: AssetImage('Images/fuelup.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),

@@ -16,13 +16,17 @@ class ScreenTWO extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20),
               child: Container(
+                margin: EdgeInsets.only(top: 8),
                 width: 150,
                 height: 150,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color.fromARGB(255, 80, 77, 77)),
+                  border: Border.all(color: Colors.white),
                   shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage('Images/fuelup.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                child: Image.asset('Images/logo .png', fit: BoxFit.fill),
               ),
             ),
             Container(

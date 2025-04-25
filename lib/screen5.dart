@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:team2/data.dart';
+
+import 'screen4.dart';
 
 class ScreenFive extends StatelessWidget {
   const ScreenFive({super.key});
@@ -41,7 +45,7 @@ class ScreenFive extends StatelessWidget {
                   child: Text(
                     'Special For You',
                     style: GoogleFonts.inter(
-                      color: Color.fromRGBO(182, 212, 85, 1),
+                      color: mygreen,
                       fontSize: 32,
                       fontWeight: FontWeight.w800,
                     ),
@@ -220,10 +224,14 @@ class ScreenFive extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Image.asset('Images/cart.png'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/nav');
+                  },
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/eight');
+                  },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
